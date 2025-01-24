@@ -9,7 +9,8 @@ return {
     lazy = false,
     opts = {
       ensure_installed = {
-        "lua_ls"
+        "lua_ls",
+        "bashls",
       }
     }
   },
@@ -26,6 +27,8 @@ return {
           }
         }
       })
+
+      lconf.bashls.setup({})
     end
   }
 }
