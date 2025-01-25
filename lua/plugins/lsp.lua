@@ -23,7 +23,12 @@ return {
       lconf.lua_ls.setup({
         settings = {
           Lua = {
-            runtime = {version = "LuaJIT"}
+            runtime = {version = "LuaJIT"},
+            workspace = {
+              library = {
+                vim.env.VIMRUNTIME
+              }
+            }
           }
         }
       })
