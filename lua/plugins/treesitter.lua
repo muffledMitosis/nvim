@@ -1,8 +1,13 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
+  version = false,
+--  build = ":TSUpdate",
+  prioriy = 1000,
   opts = {
-    highlight = { enable = true },
+    highlight = {
+      enable = true,
+      use_languagetree = true,
+    },
     indent = { enable = true },
     ensure_installed = {
       "bash",
