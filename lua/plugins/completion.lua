@@ -55,5 +55,10 @@ return {
         }),
       }
     end
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    lazy = false,
+    opts = {}
   }
 }
