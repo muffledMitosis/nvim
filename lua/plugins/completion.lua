@@ -76,5 +76,10 @@ return {
       -- better deal with markdown code blocks
       markdown = true,
     },
-  }
+  },
+  {
+    "folke/ts-comments.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
 }
