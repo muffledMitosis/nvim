@@ -1,3 +1,5 @@
+local keymaps = require("config.keymaps")
+
 return {
   {
     "williamboman/mason.nvim",
@@ -23,11 +25,11 @@ return {
     lazy = false,
     config = function()
       local lconf = require("lspconfig")
-
       lconf.lua_ls.setup({
+        on_attach = keymaps.lsp_on_attach,
         settings = {
           Lua = {
-            runtime = {version = "LuaJIT"},
+            runtime = { version = "LuaJIT" },
             workspace = {
               library = {
                 vim.env.VIMRUNTIME
@@ -37,7 +39,9 @@ return {
         }
       })
 
-      lconf.bashls.setup({})
+      lconf.bashls.setup({
+        on_attach = keymaps.lsp_on_attach,
+      })
     end
   }
 }
