@@ -39,9 +39,11 @@ return {
         }
       })
 
-      lconf.bashls.setup({
-        on_attach = keymaps.lsp_on_attach,
-      })
+      lconf.bashls.setup({ on_attach = keymaps.lsp_on_attach })
+      lconf.ts_ls.setup({ on_attach = keymaps.lsp_on_attach })
+      lconf.html.setup({ on_attach = keymaps.lsp_on_attach })
+      lconf.cssls.setup({ on_attach = keymaps.lsp_on_attach })
+      lconf.clangd.setup({ on_attach = keymaps.lsp_on_attach })
     end
   }
 }
