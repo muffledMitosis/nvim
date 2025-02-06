@@ -18,6 +18,7 @@ return {
         "cssls",
         "clangd",
         "tailwindcss",
+        "texlab",
       }
     }
   },
@@ -46,6 +47,7 @@ return {
       lconf.cssls.setup({ on_attach = keymaps.lsp_on_attach })
       lconf.clangd.setup({ on_attach = keymaps.lsp_on_attach })
       lconf.tailwindcss.setup({ on_attach = keymaps.lsp_on_attach })
+      lconf.texlab.setup({ on_attach = keymaps.lsp_on_attach })
     end
   }
 }
