@@ -83,5 +83,13 @@ return {
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = "skim"
     end
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    branch = '0.1.x',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      { "nvim-tree/nvim-web-devicons", opts = {} },
+    }
   }
 }
