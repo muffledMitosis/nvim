@@ -71,6 +71,14 @@ return {
     },
     opts = {
       filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = true,
+          visible = "hide",
+          hide_by_name = {
+            ".git"
+          }
+        },
         hijack_netrw_behavior = "open_default"
       }
     }
