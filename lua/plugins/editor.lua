@@ -99,5 +99,12 @@ return {
       "nvim-lua/plenary.nvim",
       { "nvim-tree/nvim-web-devicons", opts = {} },
     }
-  }
+  },
+  {
+    'tpope/vim-fugitive',
+    config = function()
+      -- Optional: any specific configuration for vim-fugitive can go here
+      -- For example, you can set up some keymaps or options
+    end
+  },
 }
