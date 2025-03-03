@@ -60,46 +60,46 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {}
   },
---  {
---    "nvim-neo-tree/neo-tree.nvim",
---    branch = "v3.x",
---    dependencies = {
---      "nvim-lua/plenary.nvim",
---      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
---      "MunifTanjim/nui.nvim",
---      {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
---    },
---    opts = {
---      filesystem = {
---        filtered_items = {
---          hide_dotfiles = false,
---          hide_gitignored = true,
---          visible = "hide",
---          hide_by_name = {
---            ".git"
---          }
---        },
---        hijack_netrw_behavior = "open_default"
---      }
---    }
---  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- { "3rd/image.nvim", opts = {} }, -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
+    opts = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = true,
+          visible = "hide",
+          hide_by_name = {
+            ".git"
+          }
+        },
+        hijack_netrw_behavior = "open_default"
+      }
+    }
+  },
   {
     "lervag/vimtex",
-    lazy = false,     -- we don't want to lazy load VimTeX
+    lazy = false, -- we don't want to lazy load VimTeX
     -- tag = "v2.15", -- uncomment to pin to a specific release
     init = function()
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = "skim"
     end
   },
---  {
---    "nvim-telescope/telescope.nvim",
---    branch = '0.1.x',
---    dependencies = {
---      "nvim-lua/plenary.nvim",
---      { "nvim-tree/nvim-web-devicons", opts = {} },
---    }
---  },
+  --  {
+  --    "nvim-telescope/telescope.nvim",
+  --    branch = '0.1.x',
+  --    dependencies = {
+  --      "nvim-lua/plenary.nvim",
+  --      { "nvim-tree/nvim-web-devicons", opts = {} },
+  --    }
+  --  },
   {
     'tpope/vim-fugitive',
     config = function()

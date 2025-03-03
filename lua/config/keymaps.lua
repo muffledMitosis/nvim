@@ -43,4 +43,7 @@ end
 --vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 --vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code Actions' })
+vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format, { desc = 'Format file' })
+
 return M
