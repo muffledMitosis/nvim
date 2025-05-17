@@ -1,3 +1,5 @@
+local lspCfgs = require('config.lsp')
+
 return {
   {
     "mason-org/mason.nvim",
@@ -21,7 +23,8 @@ return {
     },
     lazy = false,
     config = function()
-      vim.lsp.enable('lua_ls')
+      --vim.lsp.enable('lua_ls')
+      lspCfgs.lua_ls_cfg()
     end,
   }
 }
