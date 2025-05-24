@@ -20,5 +20,9 @@ return {
         hijack_netrw_behavior = "open_default"
       }
     },
+  },
+  {
+    "karb94/neoscroll.nvim",
+    opts = {},
   }
 }
