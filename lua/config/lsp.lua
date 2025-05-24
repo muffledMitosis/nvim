@@ -51,4 +51,18 @@ function M.lua_ls_cfg()
  })
 end
 
+function M.pyls_cfg()
+  vim.lsp.config('pylsp', {
+    settings = {
+      pylsp = {
+        plugins = {
+          pycodestyle = {
+            indentSize = 2
+          }
+        }
+      }
+    }
+  })
+end
+
 return M

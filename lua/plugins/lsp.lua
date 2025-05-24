@@ -10,7 +10,8 @@ return {
     "mason-org/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
-        'lua_ls'
+        'lua_ls',
+        'pylsp'
       },
     },
     lazy = false,
@@ -25,6 +26,7 @@ return {
     config = function()
       --vim.lsp.enable('lua_ls')
       lspCfgs.lua_ls_cfg()
+      lspCfgs.pyls_cfg()
     end,
   }
 }
