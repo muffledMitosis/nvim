@@ -11,7 +11,8 @@ return {
     opts = {
       ensure_installed = {
         'lua_ls',
-        'pylsp'
+        'pylsp',
+        'texlab',
       },
     },
     lazy = false,
