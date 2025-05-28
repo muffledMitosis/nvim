@@ -13,6 +13,7 @@ return {
         'lua_ls',
         'pylsp',
         'texlab',
+        'rust_analyzer',
       },
     },
     lazy = false,
@@ -25,9 +26,11 @@ return {
     },
     lazy = false,
     config = function()
-      --vim.lsp.enable('lua_ls')
+
       lspCfgs.lua_ls_cfg()
       lspCfgs.pyls_cfg()
+
+      -- Enable Diagnostics
       vim.diagnostic.config({
         virtual_text = true,
         signs = true,
