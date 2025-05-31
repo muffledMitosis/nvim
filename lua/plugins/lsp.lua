@@ -14,6 +14,7 @@ return {
         'pylsp',
         'texlab',
         'rust_analyzer',
+        'ts_ls',
       },
     },
     lazy = false,
