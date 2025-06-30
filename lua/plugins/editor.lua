@@ -86,14 +86,32 @@ return {
       vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
         { desc = "Open harpoon window" })
 
-      vim.keymap.set("n", "<C-j>", function() harpoon:list():select(1) end)
-      vim.keymap.set("n", "<C-k>", function() harpoon:list():select(2) end)
-      vim.keymap.set("n", "<C-l>", function() harpoon:list():select(3) end)
-      vim.keymap.set("n", "<C-;>", function() harpoon:list():select(4) end)
+      vim.keymap.set("n", "<C-m>", function() harpoon:list():select(1) end)
+      vim.keymap.set("n", "<C-,>", function() harpoon:list():select(2) end)
+      vim.keymap.set("n", "<C-.>", function() harpoon:list():select(3) end)
+      vim.keymap.set("n", "<C-/>", function() harpoon:list():select(4) end)
 
       -- Toggle previous & next buffers stored within Harpoon list
       vim.keymap.set("n", "<C-S-n>", function() harpoon:list():prev() end)
       vim.keymap.set("n", "<C-S-m>", function() harpoon:list():next() end)
     end
+  },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
   },
 }
