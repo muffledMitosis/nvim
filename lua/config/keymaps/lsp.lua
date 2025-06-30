@@ -1,3 +1,6 @@
+-- Remove default mapping of <C-l>
+pcall(vim.keymap.del, 'n', '<C-l>')
+
 local function setLSPKeyBind(key, func, desc)
   vim.keymap.set('n', '<C-l>' .. key, func, { desc = (desc or 'LSP ') .. key })
 end
