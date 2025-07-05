@@ -15,6 +15,7 @@ return {
         'texlab',
         'rust_analyzer',
         'ts_ls',
+        'jsonls',
       },
     },
     lazy = false,
