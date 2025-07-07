@@ -11,7 +11,7 @@ return {
     opts = {
       ensure_installed = {
         'lua_ls',
-        'pyright',
+        'basedpyright',
         'texlab',
         'rust_analyzer',
         'ts_ls',
