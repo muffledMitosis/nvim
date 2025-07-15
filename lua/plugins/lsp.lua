@@ -11,10 +11,11 @@ return {
     opts = {
       ensure_installed = {
         'lua_ls',
-        'pylsp',
+        'basedpyright',
         'texlab',
         'rust_analyzer',
         'ts_ls',
+        'jsonls',
       },
     },
     lazy = false,
@@ -29,7 +30,7 @@ return {
     config = function()
 
       lspCfgs.lua_ls_cfg()
-      lspCfgs.pyls_cfg()
+      -- lspCfgs.pyls_cfg()
 
       -- Enable Diagnostics
       vim.diagnostic.config({
